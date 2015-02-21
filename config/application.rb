@@ -25,7 +25,7 @@ module Inviter
 
     config.middleware.insert_before 0, "Rack::Cors" do
       allow do
-        origins "powershell-slack.herokuapp.com", "slack.poshcode.org", "localhost:4000"
+        origins "powershell-slack.herokuapp.com", "slack.poshcode.org", "poshcode.github.io", "localhost:8000"
         resource "/invitations",
           headers: :any,
           methods: [:post],
