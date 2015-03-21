@@ -1,0 +1,6 @@
+{
+  "name": "Slack Community Inviter",
+  "description": "Starter Kit for a slack community",
+  "repository": "https://github.com/blairanders/slack-inviter",
+  "keywords": ["rails", "slack"]
+}
