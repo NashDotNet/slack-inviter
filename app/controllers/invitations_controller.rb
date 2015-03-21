@@ -5,16 +5,26 @@ class InvitationsController < ApplicationController
 
   def create
     @invitation = Invitation.new(invitation_params)
-    if @invitation.valid?
-      @invitation.enqueue
-      head :ok
-    else
-      head :unprocessable_entity
+
+    begin
+      if @invitation.valid? && @invitation.perform
+        head :ok
+      else
+        unprocessable
+      end
+    rescue
+      unprocessable
     end
   end
+
 
   private
   def invitation_params
     params.require(:invitation).permit(:email)
   end
+
+  def unprocessable
+    head :unprocessable_entity
+  end
+
 end

@@ -28,11 +28,7 @@ The route is meant to be used by a JavaScript client. You can whitelist CORS ori
 
 Configuration items are stored in environment variables.
 
-* SLACK_SUBDOMAIN: e.g., tech404 for tech404.slack.com
-* SLACK_TOKEN: an API token for an administrator of the organization
+* SLACK_SUBDOMAIN: e.g., tech404 for tech404.slack.com (signup for slack)
+* SLACK_TOKEN: an API token for an administrator of the organization (from: https://api.slack.com/web)
 * SIDEKIQ_USERNAME: username for the sidekiq administration area
 * SIDEKIQ_PASSWORD: password for the sidekiq administration area
-
-## Deployment
-
-Deployed on Heroku. Ask @alindeman for access. In production, we run a puma process in the same dyno as a sidekiq worker. It's a hack to keep it free.
