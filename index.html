@@ -29,18 +29,38 @@
       </header>
       <section>
         <h1>
-<a id="slack-inviter" class="anchor" href="#slack-inviter" aria-hidden="true"><span class="octicon octicon-link"></span></a>Slack Inviter</h1>
+<a id="slack-community" class="anchor" href="#slack-community" aria-hidden="true"><span class="octicon octicon-link"></span></a>Slack Community</h1>
 
 <p>A simple application, to help bootstrap your slack community.</p>
 
 <ol>
-<li><p>Signup for Slack</p></li>
-<li><p>Publish this app, add your configurations.</p></li>
-<li><p>Submit your website url to <a href="https://keep-awake.herokuapp.com/">https://keep-awake.herokuapp.com/</a> </p></li>
+<li>Signup for a slack team on their homepage(<a href="https://slack.com/">https://slack.com/</a>)</li>
+<li>Publish this app, add your configurations.
+
+<ul>
+<li><a href="https://heroku.com/deploy"><img src="https://www.herokucdn.com/deploy/button.png" alt="Deploy"></a></li>
+</ul>
+</li>
+<li>Submit your heroku url to <a href="https://keep-awake.herokuapp.com/">https://keep-awake.herokuapp.com/</a> - add <code>_ping</code> for optimal performance (eg <a href="http://example.herokuapp.com/_ping">http://example.herokuapp.com/_ping</a> )</li>
 </ol>
 
 <h2>
 <a id="usage" class="anchor" href="#usage" aria-hidden="true"><span class="octicon octicon-link"></span></a>Usage</h2>
+
+<h3>
+<a id="post-invitations" class="anchor" href="#post-invitations" aria-hidden="true"><span class="octicon octicon-link"></span></a>POST /invitations</h3>
+
+<p>To enqueue an invitation request:</p>
+
+<div class="highlight highlight-bash"><pre>curl -X POST \
+  -H <span class="pl-s"><span class="pl-pds">"</span>Content-Type: application/json<span class="pl-pds">"</span></span> \
+  -d <span class="pl-s"><span class="pl-pds">"</span>{<span class="pl-cce">\"</span>email<span class="pl-cce">\"</span>:<span class="pl-cce">\"</span>andy@example.com<span class="pl-cce">\"</span>}<span class="pl-pds">"</span></span> \
+  http://localhost:3000/invitations</pre></div>
+
+<p>The route is meant to be used by a JavaScript client. You can whitelist CORS origins in <code>config/application.rb</code>.</p>
+
+<h2>
+<a id="development" class="anchor" href="#development" aria-hidden="true"><span class="octicon octicon-link"></span></a>Development</h2>
 
 <p>clone
 bundle
@@ -63,21 +83,6 @@ BACKGROUND_IMAGE=<span class="pl-s"><span class="pl-pds">"</span>http://i.imgur.
 <p>start the server</p>
 
 <p><code>rails s</code></p>
-
-<h3>
-<a id="post-invitations" class="anchor" href="#post-invitations" aria-hidden="true"><span class="octicon octicon-link"></span></a>POST /invitations</h3>
-
-<p>To enqueue an invitation request:</p>
-
-<div class="highlight highlight-bash"><pre>curl -X POST \
-  -H <span class="pl-s"><span class="pl-pds">"</span>Content-Type: application/json<span class="pl-pds">"</span></span> \
-  -d <span class="pl-s"><span class="pl-pds">"</span>{<span class="pl-cce">\"</span>email<span class="pl-cce">\"</span>:<span class="pl-cce">\"</span>andy@example.com<span class="pl-cce">\"</span>}<span class="pl-pds">"</span></span> \
-  http://localhost:3000/invitations</pre></div>
-
-<p>The route is meant to be used by a JavaScript client. You can whitelist CORS origins in <code>config/application.rb</code>.</p>
-
-<h2>
-<a id="development" class="anchor" href="#development" aria-hidden="true"><span class="octicon octicon-link"></span></a>Development</h2>
 
 <h3>
 <a id="prerequisites" class="anchor" href="#prerequisites" aria-hidden="true"><span class="octicon octicon-link"></span></a>Prerequisites</h3>
