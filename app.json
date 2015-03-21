@@ -2,5 +2,18 @@
   "name": "Slack Community Inviter",
   "description": "Starter Kit for a slack community",
   "repository": "https://github.com/blairanders/slack-inviter",
-  "keywords": ["rails", "slack"]
+  "keywords": [
+    "rails",
+    "slack"
+  ],
+  "website": "http://blairanderson.github.io/slack-inviter",
+  "env": {
+    "SIDEKIQ_USERNAME": "user",
+    "SIDEKIQ_PASSWORD": "password",
+    "SLACK_TOKEN": "yourslacktoken",
+    "SLACK_SUBDOMAIN": "yourslacksubdomain",
+    "TITLE": "Name of your Community?!"
+  }
 }
+
+
