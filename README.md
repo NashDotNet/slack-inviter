@@ -1,8 +1,32 @@
 # Slack Inviter
 
-The application behind the [tech404 automatic invitation system](http://tech404.io)
+The application to bootstrap your slack community
 
 ## Usage
+
+clone
+bundle
+rename .env file
+
+`mv .env.example .env`
+
+edit variables
+
+```bash
+
+SIDEKIQ_USERNAME=user
+SIDEKIQ_PASSWORD=password
+SLACK_TOKEN=yourslackapitoken
+SLACK_SUBDOMAIN=yourslacksubdomain
+TITLE="Title of your slack community?"
+TOP_SUBTITLE="Come make some friends, share links, meet a lunch buddy."
+BACKGROUND_IMAGE="http://i.imgur.com/vDADTWP.jpg"
+
+```
+
+start the server
+
+`rails s`
 
 ### POST /invitations
 
@@ -28,7 +52,14 @@ The route is meant to be used by a JavaScript client. You can whitelist CORS ori
 
 Configuration items are stored in environment variables.
 
-* SLACK_SUBDOMAIN: e.g., tech404 for tech404.slack.com (signup for slack)
-* SLACK_TOKEN: an API token for an administrator of the organization (from: https://api.slack.com/web)
-* SIDEKIQ_USERNAME: username for the sidekiq administration area
-* SIDEKIQ_PASSWORD: password for the sidekiq administration area
+```bash
+
+SIDEKIQ_USERNAME=user
+SIDEKIQ_PASSWORD=password
+SLACK_TOKEN=yourslackapitoken (an API token for an administrator of the organization from: https://api.slack.com/web)
+SLACK_SUBDOMAIN= e.g., tech404 for tech404.slack.com (signup for slack)
+TITLE="Title of your slack community?"
+TOP_SUBTITLE="Come make some friends, share links, meet a lunch buddy."
+BACKGROUND_IMAGE="http://i.imgur.com/vDADTWP.jpg"
+
+```
