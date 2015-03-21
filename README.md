@@ -3,17 +3,27 @@
 A simple application, to help bootstrap your slack community.
 
 1. Signup for a slack team on their homepage(https://slack.com/)
-
-
 2. Publish this app, add your configurations.
-
-[![Deploy](https://www.herokucdn.com/deploy/button.png)](https://heroku.com/deploy)
-
-
+  - [![Deploy](https://www.herokucdn.com/deploy/button.png)](https://heroku.com/deploy)
 3. Submit your heroku url to https://keep-awake.herokuapp.com/ - add `_ping` for optimal performance (eg http://example.herokuapp.com/_ping )
 
 
 ## Usage
+
+### POST /invitations
+
+To enqueue an invitation request:
+
+```bash
+curl -X POST \
+  -H "Content-Type: application/json" \
+  -d "{\"email\":\"andy@example.com\"}" \
+  http://localhost:3000/invitations
+```
+
+The route is meant to be used by a JavaScript client. You can whitelist CORS origins in `config/application.rb`.
+
+## Development
 
 clone
 bundle
@@ -39,20 +49,6 @@ start the server
 
 `rails s`
 
-### POST /invitations
-
-To enqueue an invitation request:
-
-```bash
-curl -X POST \
-  -H "Content-Type: application/json" \
-  -d "{\"email\":\"andy@example.com\"}" \
-  http://localhost:3000/invitations
-```
-
-The route is meant to be used by a JavaScript client. You can whitelist CORS origins in `config/application.rb`.
-
-## Development
 
 ### Prerequisites
 
