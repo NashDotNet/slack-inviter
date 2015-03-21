@@ -8,7 +8,8 @@ class InvitationsController < ApplicationController
 
     begin
       if @invitation.valid? && @invitation.perform
-        redirect_to root_path, notice: "Check your email!" and return
+        flash[:success] = "Check your email!"
+        redirect_to root_path and return
       else
         unprocessable
       end
@@ -24,7 +25,7 @@ class InvitationsController < ApplicationController
   end
 
   def unprocessable
-    redirect_to root_path, notice: 'sorry, there was an error' and return
+    redirect_to root_path, alert: 'sorry, there was an error' and return
   end
 
 end
