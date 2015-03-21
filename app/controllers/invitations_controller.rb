@@ -1,4 +1,8 @@
 class InvitationsController < ApplicationController
+  def new
+    @invitation = Invitation.new
+  end
+
   def create
     @invitation = Invitation.new(invitation_params)
     if @invitation.valid?

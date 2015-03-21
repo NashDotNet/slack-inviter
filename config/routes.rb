@@ -1,9 +1,8 @@
 Rails.application.routes.draw do
   get "/_ping", to: Proc.new { |env| [200, {"Content-Type" => "text/plain"}, []] }
 
-  resources :invitations, only: [:create]
-
-  root to: "welcome#home"
+  resources :invitations, only: [:create, :new]
+  root to: "invitations#new"
 
   require "sidekiq/web"
   Sidekiq::Web.use Rack::Auth::Basic do |username, password|
