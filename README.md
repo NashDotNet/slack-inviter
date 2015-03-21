@@ -1,12 +1,19 @@
-# Slack Community
+# Slack Community Inviter/Landing Page
 
 A simple application, to help bootstrap your slack community.
 
-1. Signup for a slack team on their homepage(https://slack.com/)
-2. Publish this app, add your configurations.
-  - [![Deploy](https://www.herokucdn.com/deploy/button.png)](https://heroku.com/deploy)
-3. Submit your heroku url to https://keep-awake.herokuapp.com/ - add `_ping` for optimal performance (eg http://example.herokuapp.com/_ping )
+# Setup
 
+1. Signup for a slack team on their homepage(https://slack.com/)
+  - Go through the entire process.
+  - visit https://api.slack.com/web#authentication and get a token!
+
+2. Publish this app, add your configurations.
+
+[![Deploy](https://www.herokucdn.com/deploy/button.png)](https://heroku.com/deploy)
+
+
+3. Submit your heroku url to https://keep-awake.herokuapp.com/ - add `_ping` for optimal performance (eg http://example.herokuapp.com/_ping )
 
 ## Usage
 

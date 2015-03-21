@@ -8,8 +8,6 @@
   ],
   "website": "http://blairanderson.github.io/slack-inviter",
   "env": {
-    "SIDEKIQ_USERNAME": "user",
-    "SIDEKIQ_PASSWORD": "password",
     "SLACK_TOKEN": "yourslacktoken",
     "SLACK_SUBDOMAIN": "yourslacksubdomain",
     "TITLE": "Name of your Community?!"
