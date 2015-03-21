@@ -67,6 +67,8 @@ GEM
       thread_safe (~> 0.3, >= 0.3.1)
     diff-lcs (1.2.5)
     dotenv (1.0.2)
+    dotenv-rails (1.0.2)
+      dotenv (= 1.0.2)
     equalizer (0.0.9)
     erubis (2.7.0)
     execjs (2.3.0)
@@ -210,7 +212,7 @@ PLATFORMS
 DEPENDENCIES
   byebug
   coffee-rails (~> 4.1.0)
-  dotenv
+  dotenv-rails
   foreman (~> 0.77)
   jquery-rails
   pg

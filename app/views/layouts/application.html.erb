@@ -12,9 +12,15 @@
   <!-- Bootstrap core CSS -->
   <link href="assets/css/bootstrap.css" rel="stylesheet">
 
-  <!-- Custom styles for this template -->
-  <link href="assets/css/style.css" rel="stylesheet">
+  <%= stylesheet_link_tag "style" %>
 
+  <style>
+    #h:before {
+      background:
+      linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+      url("<%= background_image %>") no-repeat center top;
+    }
+  </style>
   <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
   <script src="assets/js/ie10-viewport-bug-workaround.js"></script>
 

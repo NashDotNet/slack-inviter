@@ -1,7 +1,6 @@
 source 'https://rubygems.org'
 ruby "2.2.0"
 
-gem 'dotenv'
 gem 'rails', '4.2.0'
 gem 'pg'
 gem 'simple_form'
@@ -21,6 +20,7 @@ gem 'sinatra', '~> 1.4', '>= 1.4.5', :require => nil
 gem 'virtus', '~> 1.0', '>= 1.0.4'
 
 group :development, :test do
+  gem 'dotenv-rails'
   gem 'byebug'
   gem 'web-console', '~> 2.0'
   gem 'spring'

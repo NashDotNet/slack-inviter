@@ -8,7 +8,7 @@ class InvitationsController < ApplicationController
 
     begin
       if @invitation.valid? && @invitation.perform
-        head :ok
+        redirect_to root_path, notice: "Check your email!" and return
       else
         unprocessable
       end
@@ -24,7 +24,7 @@ class InvitationsController < ApplicationController
   end
 
   def unprocessable
-    head :unprocessable_entity
+    redirect_to root_path, notice: 'sorry, there was an error' and return
   end
 
 end

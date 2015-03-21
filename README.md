@@ -1,4 +1,4 @@
-# tech404 inviter
+# Slack Inviter
 
 The application behind the [tech404 automatic invitation system](http://tech404.io)
 
