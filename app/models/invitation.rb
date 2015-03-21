@@ -20,8 +20,9 @@ class Invitation
 
   private
   def slack_client
-    @slack_client ||= Slack::Client.new \
-      subdomain: ENV.fetch("SLACK_SUBDOMAIN"),
-      token: ENV.fetch("SLACK_TOKEN")
+    @slack_client ||= Slack::Client.new({
+        subdomain: ENV.fetch("SLACK_SUBDOMAIN"),
+        token: ENV.fetch("SLACK_TOKEN")
+      })
   end
 end
